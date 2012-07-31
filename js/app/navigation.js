@@ -1,35 +1,32 @@
 /*!
-* Digicon Rotator
+* Digicon Navigation
 * @requires jQuery v1.7.2+
-* @requires jQuery Rotator v1.7.2+
-* 
+*
 * Description
 * 
-* @author Digicon http://www.digicon.com.au/
+* @author ...
 */
 !(function($) {
 
-    window.Digicon.Rotator = window.Digicon.Rotator || window.Digicon.Module(function() {
+	window.Digicon.Navigation = window.Digicon.Navigation || window.Digicon.BaseModule(function() {
+		
+		var $el;
 
-        var _options = {
-            fx: 'fade',
-            speed: '500',
-            timeout: '5000',
-            next: '.next',
-            prev: '.prev',
-            pager: '.rotator-nav',
-            activePagerClass: 'active'
-        };
-        
-        return {
-            init: function() {
-                this.ify($('.rotator'));
-            },
-            ify: function($el, additionalOptions) {
-                $.extend(_options, additionalOptions);
-                $el.Rotator(_options);
-            }
-        }
-    }());
+		return {
+			init: function() {
+				$el = $('body');
+				this.attachEvents();
+			},
+			attachEvents: function() {
+				$el.on('click', '.show-menu', this.events.showMenu);
+			},
+			events: {
+				showMenu: function(e) {
+					$('.mobile-wrap').toggleClass('nav-on');
+					$('.mobile-nav').fadeToggle();
+				}
+			}
+		}
+	}());
 
 })(jQuery);

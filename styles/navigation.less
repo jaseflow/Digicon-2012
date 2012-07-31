@@ -1,6 +1,6 @@
 .navigation {
 	float: right;
-	color: @orange;
+	color: @branding;
 }
 
 .show-menu {
@@ -38,12 +38,21 @@
 	color: @white;
 	text-decoration: none;
 	&:hover {
-		color: @orange;
+		color: @branding;
+	}
+}
+
+.mobile-nav .active a {
+	background-color: @branding;
+	color: @white;
+	[class*="icon-"] {
+		color: darken(@branding,30);
 	}
 }
 
 .mobile-nav-wrap [class^="icon-"] {
 	margin-right: 0.9375em;
+	color: @branding;
 }
 
 .mobile-nav-wrap a {
@@ -73,10 +82,10 @@
 	font-weight: bold;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 	&:hover {
-		color: @orange;
+		color: @branding;
 	}
 }
 
 .main-nav .active a {
-	color: @orange;
+	color: @branding;
 }

@@ -1,7 +1,11 @@
-.hero {
-	color: @white;
-	margin-bottom: @base-line;
-	position: relative;
+
+.hero,
+.hero-item {
+	height: 15.625em; // 250px
+}
+
+.hero-item {
+	width: 100%;
 }
 
 .hero-title {
@@ -10,7 +14,30 @@
 	font-family: 'LeagueGothicRegular';
 	text-transform: uppercase;
 	font-weight: normal;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+.hero-img,
+.hero-bg {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.hero-img {
+	z-index: 2;
+}
+
+.hero-bg {
+	width: 85em;
+	z-index: 1;
+	margin-left: -42.5em;
+	left: 50%;
+}
+
+.hero-content {
+	position: relative;
+	z-index: 50;
+	margin-bottom: @base-line;
 }
 
 .hero-btn {
@@ -29,12 +56,12 @@
 .hero-nav li {
 	display: block;
 	float: left;
-	margin-left: 5/16em;
+	margin-left: 0.3125em;
 	width: 3.75em; 
 	height: 3.75em; // 60px
 	padding: 0.3125em; // 5px
-	.border-radius(40px);
-	background-color: @dark-blue;
+	.border-radius(2.5em);
+	background-color: @grey-dark;
 	&:first-child {
 		margin-left: 0;
 	}

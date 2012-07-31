@@ -1,4 +1,41 @@
 
+// Page shift for navigation
+// -------------------------
+
+.nav-off {
+	max-width: 100%;
+	margin-left: 0;
+	overflow: hidden;
+	z-index: 10;
+	position: relative;
+	.transition(all 500ms ease-in-out);
+	.box-shadow(0 0 20px rgba(0,0,0,0.8));
+	border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.nav-on {
+	margin-left: -70%;
+}
+
+// Site section
+// -------------------------
+
+// Header
+
+.header {
+	padding-top: @base-line/2;
+	margin-bottom: @base-line;
+	position: relative;
+	z-index: 100;
+}
+
 .top {
-	background-color: @darker-blue;
+	background-color: @white;
+}
+
+.middle {
+	position: relative;
+	padding-top: @base-line*2;
+	background-color: @grey-dark;
+	color: @grey-light;
 }
