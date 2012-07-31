@@ -1,0 +1,64 @@
+.hero {
+	color: @white;
+	margin-bottom: @base-line;
+	position: relative;
+}
+
+.hero-title {
+	margin-bottom: @base-line/8;
+	line-height: 1;
+	font-family: 'LeagueGothicRegular';
+	text-transform: uppercase;
+	font-weight: normal;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+.hero-btn {
+	display: block;
+}
+
+.hero-nav {
+	position: absolute;
+	width: 18.4375em; // 295px
+	top: -2.5em; // 40px
+	margin-left: -9.25em; // -148px
+	left: 50%;
+	z-index: 400;
+}
+
+.hero-nav li {
+	display: block;
+	float: left;
+	margin-left: 5/16em;
+	width: 3.75em; 
+	height: 3.75em; // 60px
+	padding: 0.3125em; // 5px
+	.border-radius(40px);
+	background-color: @dark-blue;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.hero-nav a {
+	display: block;
+}
+
+.hero-nav img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	width: 100%;
+}
+
+.hero-nav .active {
+	background-color: @white;
+}
+.hero-nav .active img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+.hero-nav a:hover img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
