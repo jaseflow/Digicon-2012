@@ -1,7 +1,10 @@
 
-.hero,
-.hero-item {
-	height: 15.625em; // 250px
+.hero {
+	padding-bottom: 2.8571428571em;
+	background-image: url(img/bg.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 200px;
 }
 
 .hero-item {
@@ -10,10 +13,8 @@
 
 .hero-title {
 	margin-bottom: @base-line/8;
+	color: darken(@base-color,20);
 	line-height: 1;
-	font-family: 'LeagueGothicRegular';
-	text-transform: uppercase;
-	font-weight: normal;
 }
 
 .hero-img,
@@ -46,22 +47,24 @@
 
 .hero-nav {
 	position: absolute;
-	width: 18.4375em; // 295px
+	width: @hero-nav-width;
+	margin-left: -(@hero-nav-width/2);
 	top: -2.5em; // 40px
-	margin-left: -9.25em; // -148px
 	left: 50%;
 	z-index: 400;
 }
 
 .hero-nav li {
-	display: block;
-	float: left;
-	margin-left: 0.3125em;
-	width: 3.75em; 
-	height: 3.75em; // 60px
-	padding: 0.3125em; // 5px
-	.border-radius(2.5em);
-	background-color: @grey-dark;
+	display: inline-block;
+	.ib();
+	margin-left: @hero-nav-item-spacing;
+	width: @hero-nav-item-dimensions; 
+	height: @hero-nav-item-dimensions;
+	padding: @hero-nav-item-padding;
+	.border-radius(@hero-nav-item-radius);
+	background-color: @white;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	.box-sizing(border-box);
 	&:first-child {
 		margin-left: 0;
 	}

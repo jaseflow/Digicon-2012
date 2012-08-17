@@ -1,0 +1,31 @@
+
+// Updated variables
+
+@font-size:                		18px;
+@hero-nav-item-dimensions: 		8.3333333333em;
+
+// Base
+// -------------------------
+
+body { font-size: @font-size; }
+
+// Hero
+// -------------------------
+
+.hero-nav {
+	width: @hero-nav-width;
+	margin-left: -(@hero-nav-width/2);
+	top: -(@hero-nav-item-dimensions/2);
+}
+
+.hero-nav li {
+	width: @hero-nav-item-dimensions;
+	height: @hero-nav-item-dimensions;
+	.border-radius(@hero-nav-item-radius);
+}
+
+// Statement
+// -------------------------
+
+.tagline {
+}

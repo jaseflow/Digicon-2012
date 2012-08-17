@@ -2,30 +2,23 @@
 .btn {
 	display: inline-block;
 	.ib();
-	#gradient .vertical(@btn-bg-top-color,@btn-bg-btm-color);
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: bold;
 	height: 2.75em;
 	line-height: 2.75em;
 	text-align: center;
 	padding: 0 0.625em;
+	background-color: @branding;
 	color: @btn-color;
 	text-decoration: none;
 	cursor: pointer;
-	border: @btn-border-width @btn-border-style @btn-border-color;
-	.box-shadow(@btn-shadow-inner);
-	.border-radius(@btn-border-radius);
 	text-shadow: 0 0 1px rgba(255,255,255,0.3);
 }
 
 .btn-action {
+	font-size: 1.2857142857em;
 	color: @white;
-	#gradient .vertical(@branding,darken(@branding,7);
-	border: 1px solid darken(@branding,10);
-	.box-shadow(inset 0 1px 1px lighten(@branding,20));
-	text-shadow: 0 0 1px rgba(0,0,0,0.4);
 	&:hover {
-		color: @yellow;
+		color: @white;
 	}
 }
 

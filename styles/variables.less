@@ -15,6 +15,7 @@
 // Accent
 
 @red:                        #ff0000;
+@red-strong:                 #D62D38;
 @blue:                       #08c;
 @yellow:                     #ffde00;
 @orange:                     #ff7800;
@@ -30,12 +31,12 @@
 
 @font-size:                  16px;
 @base-line:                  1.65em;
-@base-font:                  'Helvetica Neue', Helvetica, arial, sans-serif;
+@base-font:                  "proxima-nova",sans-serif;
 @base-weight:                300;
-@alt-font:                   Cambria, Georgia, Times, 'Times New Roman';          
+@alt-font:                   "ratio",sans-serif;
 @base-color:                 @grey;
-@headings-font:              inherit;
-@headings-weight:            bold;
+@headings-font:              @base-font;
+@headings-weight:            300;
 @headings-color:             inherit;
 
 @link-color:                 @blue;
@@ -58,7 +59,12 @@
 @btn-shadow-inner:           inset 0 1px 1px rgba(255,255,255,0.8);
 @btn-border-radius:          0;
 
-// Textures
+// Hero Navigation Dimensions
 // -------------------------
 
-@noise-bg:                  url(img/noise.png);
+@hero-nav-item-dimensions:   3.75em;     
+@hero-nav-items:             4;
+@hero-nav-item-padding:      0.3125em;
+@hero-nav-item-radius:       (@hero-nav-item-dimensions)/2;
+@hero-nav-item-spacing:		 0.3125em;
+@hero-nav-width:             (@hero-nav-item-dimensions* @hero-nav-items) + (@hero-nav-item-spacing*3);

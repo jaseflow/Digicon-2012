@@ -1,0 +1,27 @@
+
+// Updated variables
+
+@hero-nav-item-dimensions: 5em;
+
+// Structure
+// -------------------------
+
+.middle-hero {
+	padding-top: @base-line*4;
+}
+
+// Hero
+// -------------------------
+
+.hero-nav {
+	width: @hero-nav-width;
+	margin-left: -(@hero-nav-width/2);
+	top: -(@hero-nav-item-dimensions/2);
+}
+
+.hero-nav li {
+	width: @hero-nav-item-dimensions;
+	height: @hero-nav-item-dimensions;
+	.border-radius(@hero-nav-item-radius);
+}
+

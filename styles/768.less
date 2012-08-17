@@ -1,0 +1,24 @@
+
+// Updated variables
+
+@hero-nav-item-dimensions: 6.25em;
+
+
+// Hero
+// -------------------------
+
+.hero-nav {
+	width: @hero-nav-width;
+	margin-left: -(@hero-nav-width/2);
+	top: -(@hero-nav-item-dimensions/2);
+}
+
+.hero-nav li {
+	width: @hero-nav-item-dimensions;
+	height: @hero-nav-item-dimensions;
+	.border-radius(@hero-nav-item-radius);
+}
+
+.hero-title {
+	font-size: 2.625em;
+}
